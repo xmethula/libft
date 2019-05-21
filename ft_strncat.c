@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 11:50:06 by xmethula          #+#    #+#             */
-/*   Updated: 2019/05/20 12:06:59 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/05/21 07:44:32 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	int i;
-	int j;
-	size_t k;
+	int		i;
+	int		j;
+	size_t	k;
 
 	i = 0;
 	j = 0;
