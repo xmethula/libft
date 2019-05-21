@@ -21,10 +21,7 @@ char	*ft_strncat(char *s1, const char *s2, size_t n)
 	i = 0;
 	j = 0;
 	k = 0;
-	while (s1[i] != '\0')
-	{
-		i++;
-	}
+	i = ft_strlen(s1);
 	while (k < n)
 	{
 		s1[i] = s2[j];
