@@ -6,15 +6,15 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 07:42:23 by xmethula          #+#    #+#             */
-/*   Updated: 2019/05/20 11:46:45 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/05/21 08:41:26 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
-#include <string.h>
-#include <unistd.h>
-#include <stdlib.h>
+# define LIBFT_H
+# include <string.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 size_t		ft_strlen(const char *s);
 void		ft_putchar(char c);
