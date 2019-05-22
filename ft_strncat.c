@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 11:50:06 by xmethula          #+#    #+#             */
-/*   Updated: 2019/05/21 07:44:32 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/05/22 08:27:03 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,17 @@
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	int		i;
-	int		j;
-	size_t	k;
+	int			i;
+	size_t		j;
 
 	i = 0;
 	j = 0;
-	k = 0;
 	i = ft_strlen(s1);
-	while (k < n)
+	while ((s2[j] != '\0') && (j < n))
 	{
 		s1[i] = s2[j];
 		i++;
 		j++;
-		k++;
 	}
 	s1[i] = '\0';
 	return (s1);
