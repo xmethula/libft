@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 07:42:23 by xmethula          #+#    #+#             */
-/*   Updated: 2019/05/21 14:14:37 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/05/23 08:38:50 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 # include <stdlib.h>
 
 void		ft_putchar(char c);
-void		ft_putnbr(int nbr);
-void		ft_putstr(char *str);
+void		ft_putnbr(int n);
+void		ft_putstr(char const *s);
 
 size_t		ft_strlen(const char *s);
 int			ft_strcmp(const char *s1, const char *s2);
