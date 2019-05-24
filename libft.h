@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 07:42:23 by xmethula          #+#    #+#             */
-/*   Updated: 2019/05/24 10:58:17 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/05/24 11:21:53 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void		ft_putchar(char c);
 void		ft_putnbr(int n);
 void		ft_putstr(char const *s);
 void		ft_strclr(char *s);
+void		ft_putendl(char const *s);
 
 size_t		ft_strlen(const char *s);
 int			ft_strcmp(const char *s1, const char *s2);
