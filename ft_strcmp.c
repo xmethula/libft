@@ -6,11 +6,11 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 07:39:41 by xmethula          #+#    #+#             */
-/*   Updated: 2019/05/20 07:39:52 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/05/24 10:43:56 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char const *s1, char const *s2)
+int		ft_strcmp(char const *s1, char const *s2)
 {
 	int i;
 
