@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 07:42:23 by xmethula          #+#    #+#             */
-/*   Updated: 2019/05/24 08:31:54 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/05/24 10:38:45 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int			ft_isascii(int c);
 int			ft_isprint(int c);
 int			ft_toupper(int c);
 int			ft_tolower(int c);
+int			ft_strequ(char const *s1, char const *s2);
 
 char		*ft_strcpy(char *dest, const char *src);
 char		*ft_strncpy(char *dest, const char *src, size_t n);
