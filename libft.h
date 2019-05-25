@@ -22,6 +22,7 @@ void		ft_putnbr(int n);
 void		ft_putstr(char const *s);
 void		ft_strclr(char *s);
 void		ft_putendl(char const *s);
+void		*ft_memset(void *s, int c, size_t n);
 
 size_t		ft_strlen(const char *s);
 int			ft_strcmp(const char *s1, const char *s2);
