@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 09:31:40 by xmethula          #+#    #+#             */
-/*   Updated: 2019/05/27 09:40:30 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/05/27 13:31:35 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *dest, void *src, size_t n)
 	i = 0;
 	while ((i < n))
 	{
-		*(char *)(dest + i) = *(char *)(src + i);
+		((char *)dest)[i] = ((char *)src)[i];
 		i++;
 	}
 	return (dest);
