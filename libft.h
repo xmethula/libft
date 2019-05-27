@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 07:42:23 by xmethula          #+#    #+#             */
-/*   Updated: 2019/05/24 11:21:53 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/05/27 10:35:47 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void		ft_putnbr(int n);
 void		ft_putstr(char const *s);
 void		ft_strclr(char *s);
 void		ft_putendl(char const *s);
+void		ft_bzero(void *s, size_t n);
 
 size_t		ft_strlen(const char *s);
 int			ft_strcmp(const char *s1, const char *s2);
@@ -45,5 +46,7 @@ char		*ft_strdup(const char *s1);
 char		*ft_strcat(char *s1, const char *s2);
 char		*ft_strncat(char *s1, const char *s2, size_t n);
 void		*ft_memset(void *s, int c, size_t n);
+void		*ft_memcpy(void *dest, void *src, size_t n);
+void		*ft_memccpy(void *dest, void *src, int c, size_t n);
 
 #endif
