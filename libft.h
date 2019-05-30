@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 07:42:23 by xmethula          #+#    #+#             */
-/*   Updated: 2019/05/29 11:53:56 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/05/30 08:08:16 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <ctype.h>
 
 void		ft_putchar(char c);
 void		ft_putnbr(int n);
