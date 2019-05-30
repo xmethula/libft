@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 07:39:41 by xmethula          #+#    #+#             */
-/*   Updated: 2019/05/24 10:43:56 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/05/30 15:52:52 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ int		ft_strcmp(char const *s1, char const *s2)
 	{
 		i++;
 	}
-	return (s1[i] - s2[i]);
+	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 }
