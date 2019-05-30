@@ -6,21 +6,21 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 09:31:40 by xmethula          #+#    #+#             */
-/*   Updated: 2019/05/27 13:31:35 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/05/30 11:27:06 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, void *src, size_t n)
+void	*ft_memcpy(void *dst, void *src, size_t n)
 {
 	size_t i;
 
 	i = 0;
 	while ((i < n))
 	{
-		((char *)dest)[i] = ((char *)src)[i];
+		((char *)dst)[i] = ((char *)src)[i];
 		i++;
 	}
-	return (dest);
+	return (dst);
 }
