@@ -53,5 +53,6 @@ void		*ft_memset(void *b, int c, size_t len);
 void		*ft_memcpy(void *dst, void *src, size_t n);
 void		*ft_memccpy(void *dst, void *src, int c, size_t n);
 void		*ft_memchr(const void *s, int c, size_t n);
+void		*ft_memalloc(size_t size);
 
 #endif
