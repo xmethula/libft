@@ -6,11 +6,11 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 08:27:56 by xmethula          #+#    #+#             */
-/*   Updated: 2019/05/31 15:38:05 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/06/05 15:24:13 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	check(const char *str, int *i)
+static	void	check(const char *str, int *i)
 {
 	while ((str[*i] == ' ') ||
 			(str[*i] == '\n') ||
@@ -25,9 +25,9 @@ void	check(const char *str, int *i)
 
 int		ft_atoi(const char *str)
 {
-	int i;
-	int sign;
-	int res;
+	int				i;
+	int				sign;
+	int				res;
 
 	i = 0;
 	res = 0;
@@ -41,9 +41,9 @@ int		ft_atoi(const char *str)
 	{
 		i++;
 	}
-	while (str[i] != '\0')
+	while ((str[i] != '\0') && (str[i] >= '0' && str[i] <= '9'))
 	{
-		res = (res * 10) + str[i] - '0';
+		res = res * 10 + (str[i] - '0');
 		i++;
 	}
 	return (sign * res);
