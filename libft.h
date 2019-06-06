@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 07:42:23 by xmethula          #+#    #+#             */
-/*   Updated: 2019/06/06 12:37:30 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/06/06 14:19:52 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void		ft_strclr(char *s);
 void		ft_putendl(char const *s);
 void		ft_bzero(void *s, size_t n);
 void		ft_memdel(void **ap);
+void		ft_strdel(char **as);
 
 size_t		ft_strlen(const char *s);
 size_t		ft_strlcat(char *dst, const char *src, size_t dstsize);
@@ -51,6 +52,7 @@ char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);
 char		*ft_strstr(const char *haystack, const char *needle);
 char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char		*ft_strnew(size_t size);
 void		*ft_memset(void *b, int c, size_t len);
 void		*ft_memcpy(void *dst, void *src, size_t n);
 void		*ft_memccpy(void *dst, void *src, int c, size_t n);
