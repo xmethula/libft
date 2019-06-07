@@ -59,6 +59,7 @@ char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char		*ft_strnew(size_t size);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s);
+char		*ft_strsub(char const *s, unsigned int start, size_t len);
 void		*ft_memset(void *b, int c, size_t len);
 void		*ft_memcpy(void *dst, void *src, size_t n);
 void		*ft_memccpy(void *dst, void *src, int c, size_t n);
