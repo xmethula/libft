@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 07:42:23 by xmethula          #+#    #+#             */
-/*   Updated: 2019/06/06 14:19:52 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/06/07 10:24:49 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void		ft_putendl(char const *s);
 void		ft_bzero(void *s, size_t n);
 void		ft_memdel(void **ap);
 void		ft_strdel(char **as);
+void		ft_putchar_fd(char c, int fd);
 
 size_t		ft_strlen(const char *s);
 size_t		ft_strlcat(char *dst, const char *src, size_t dstsize);
