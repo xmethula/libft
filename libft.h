@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 07:42:23 by xmethula          #+#    #+#             */
-/*   Updated: 2019/06/07 15:05:44 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/06/10 13:10:11 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ char		*ft_strtrim(char const *s);
 char		*ft_strsub(char const *s, unsigned int start, size_t len);
 char		*ft_strmap(char const *s, char (*f)(char));
 char		*ft_strmapi(char const *s, char(*f)(unsigned int, char));
+char		**ft_strsplit(char const *s, char c);
+char		*ft_itoa(int n);
 void		*ft_memset(void *b, int c, size_t len);
 void		*ft_memcpy(void *dst, void *src, size_t n);
 void		*ft_memccpy(void *dst, void *src, int c, size_t n);
