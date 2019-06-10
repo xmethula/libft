@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 09:49:18 by xmethula          #+#    #+#             */
-/*   Updated: 2019/06/10 08:05:50 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/06/10 13:04:51 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	*ft_memmove(void *dst, void *src, size_t len)
 	i = 0;
 	dptr = (unsigned char *)dst;
 	sptr = (unsigned char *)src;
-	if ((dst == NULL) && (src == NULL))
-		return (NULL);
+	if ((dst == src) || (len == 0))
+		return (dst);
 	if (dst > src)
 	{
 		while (len--)
