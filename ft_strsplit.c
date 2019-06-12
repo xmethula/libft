@@ -64,7 +64,7 @@ char			**ft_strsplit(char const *s, char c)
 			i++;
 		if (i > j)
 		{
-			tab[k] = ft_strndup(s + j, i - j);
+			tab[k] = ft_strndup(&s[j], i - j);
 			k++;
 		}
 	}
