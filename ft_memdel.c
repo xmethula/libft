@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 08:01:41 by xmethula          #+#    #+#             */
-/*   Updated: 2019/06/06 12:52:19 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/06/13 08:26:15 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 void	ft_memdel(void **ap)
 {
-	if (ap != NULL)
+	if (ap == NULL)
+		return ;
+	else
 	{
 		free(*ap);
 		*ap = NULL;
