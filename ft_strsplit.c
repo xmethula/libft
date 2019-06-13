@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 09:56:41 by xmethula          #+#    #+#             */
-/*   Updated: 2019/06/10 11:21:58 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/06/13 15:43:34 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,21 @@
 
 static	int		ft_cntwrd(char const *s, char c)
 {
-	unsigned int	i;
-	int				cntr;
+	int i;
+	int cntr;
 
 	i = 0;
 	cntr = 0;
-	while (s[i])
+	while (s[i] != '\0')
 	{
 		while (s[i] == c)
 			i++;
-		if (s[i] != '\0')
+		while ((s[i] != '\0') && (s[i] != c))
+		{
+			if ((s[i] != '\0') && (s[i] != c))
+				i++;
 			cntr++;
-		while (s[i] && (s[i] != c))
-			i++;
+		}
 	}
 	return (cntr);
 }
@@ -55,12 +57,12 @@ char			**ft_strsplit(char const *s, char c)
 	tab = (char **)malloc(sizeof(char *) * (ft_cntwrd(s, c)) + 1);
 	if (tab == NULL)
 		return (NULL);
-	while (s[i])
+	while (s[i] != '\0')
 	{
 		while (s[i] == c)
 			i++;
 		j = i;
-		while (s[i] && s[i] != c)
+		while ((s[i] != '\0') && (s[i] != c))
 			i++;
 		if (i > j)
 		{
