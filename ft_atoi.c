@@ -43,7 +43,7 @@ int				ft_atoi(const char *str)
 		if ((res > 2147483648) && (sign == -1))
 			return (0);
 		else if ((res > 2147483647) && (sign == 1))
-			return (-1);
+			return (0);
 		i++;
 	}
 	return (sign * res);
