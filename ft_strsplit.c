@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 09:56:41 by xmethula          #+#    #+#             */
-/*   Updated: 2019/06/13 15:43:34 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/06/17 14:54:30 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,48 +14,43 @@
 
 static	int		ft_cntwrd(char const *s, char c)
 {
-	int i;
-	int cntr;
+	int		i;
+	int		ctr;
 
 	i = 0;
-	cntr = 0;
+	ctr = 0;
 	while (s[i] != '\0')
 	{
-		while (s[i] == c)
-			i++;
-		while ((s[i] != '\0') && (s[i] != c))
-		{
-			if ((s[i] != '\0') && (s[i] != c))
-				i++;
-			cntr++;
-		}
+		if (s[i] != c)
+			ctr++;
+		i++;
 	}
-	return (cntr);
+	return (ctr);
 }
 
-static	char	*ft_strndup(const char *s, size_t n)
+static	char	*ft_strndup(const char *s, size_t len)
 {
-	char			*str;
+	char	*str;
 
-	str = (char *)malloc(sizeof(char) * n + 1);
+	str = (char *)malloc(sizeof(char) * len + 1);
 	if (str == NULL)
 		return (NULL);
-	str = ft_strncpy(str, s, n);
-	str[n] = '\0';
+	str = ft_strncpy(str, s, len);
+	str[len] = '\0';
 	return (str);
 }
 
 char			**ft_strsplit(char const *s, char c)
 {
-	int				i;
-	int				j;
-	int				k;
-	char			**tab;
+	int		i;
+	int		j;
+	int		k;
+	char	**arr;
 
 	i = 0;
 	k = 0;
-	tab = (char **)malloc(sizeof(char *) * (ft_cntwrd(s, c)) + 1);
-	if (tab == NULL)
+	arr = (char **)malloc(sizeof(char *) * (ft_cntwrd(s, c)) + 1);
+	if (arr == NULL)
 		return (NULL);
 	while (s[i] != '\0')
 	{
@@ -66,10 +61,10 @@ char			**ft_strsplit(char const *s, char c)
 			i++;
 		if (i > j)
 		{
-			tab[k] = ft_strndup(&s[j], i - j);
+			arr[k] = ft_strndup(&s[j], i - j);
 			k++;
 		}
 	}
-	tab[k] = NULL;
-	return (tab);
+	arr[k] = NULL;
+	return (arr);
 }
