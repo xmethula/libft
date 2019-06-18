@@ -6,7 +6,7 @@
 #    By: xmethula <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/03 09:42:44 by xmethula          #+#    #+#              #
-#    Updated: 2019/06/12 07:57:07 by xmethula         ###   ########.fr        #
+#    Updated: 2019/06/18 11:21:58 by xmethula         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,11 @@ FILES		= ft_memset.c \
 			  ft_putchar_fd.c \
 			  ft_putstr_fd.c \
 			  ft_putendl_fd.c \
-			  ft_putnbr_fd.c
+			  ft_putnbr_fd.c \
+			  ft_start.c \
+			  ft_end.c \
+			  ft_strndup.c \
+			  ft_countword.c
 OBJ			= $(FILES:%.c=%.o)
 
 all: $(NAME)

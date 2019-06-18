@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_start.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 07:41:56 by xmethula          #+#    #+#             */
-/*   Updated: 2019/06/18 11:12:12 by xmethula         ###   ########.fr       */
+/*   Created: 2019/06/18 10:54:44 by xmethula          #+#    #+#             */
+/*   Updated: 2019/06/18 10:59:28 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t n)
+void	ft_start(char const *s, size_t *i)
 {
-	size_t i;
-
-	i = 0;
-	while ((src[i] != '\0') && (i < n))
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	while (i < n)
-	{
-		dst[i] = '\0';
-		i++;
-	}
-	return (dst);
+	while ((s[*i] == ' ') || (s[*i] == '\n') || (s[*i] == '\t'))
+		(*i)++;
 }

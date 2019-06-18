@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_end.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 07:41:56 by xmethula          #+#    #+#             */
-/*   Updated: 2019/06/18 11:12:12 by xmethula         ###   ########.fr       */
+/*   Created: 2019/06/18 10:55:17 by xmethula          #+#    #+#             */
+/*   Updated: 2019/06/18 10:55:40 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t n)
+void	ft_end(char const *s, size_t *j)
 {
-	size_t i;
-
-	i = 0;
-	while ((src[i] != '\0') && (i < n))
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	while (i < n)
-	{
-		dst[i] = '\0';
-		i++;
-	}
-	return (dst);
+	*j = ft_strlen(s) - 1;
+	while ((s[*j] == ' ') || (s[*j] == '\n') || (s[*j] == '\t'))
+		(*j)--;
 }
