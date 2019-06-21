@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 09:56:41 by xmethula          #+#    #+#             */
-/*   Updated: 2019/06/18 11:21:03 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/06/21 12:25:59 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@
 char	**ft_strsplit(char const *s, char c)
 {
 	int		i;
-	int		j;
-	int		k;
+	int		start;
+	int		row;
 	char	**arr;
 
 	i = 0;
-	k = 0;
+	row = 0;
+	if (s == NULL)
+		return (NULL);
 	arr = (char **)malloc(sizeof(char *) * (ft_countword(s, c)) + 1);
 	if (arr == NULL)
 		return (NULL);
@@ -28,15 +30,12 @@ char	**ft_strsplit(char const *s, char c)
 	{
 		while (s[i] == c)
 			i++;
-		j = i;
+		start = i;
 		while ((s[i] != '\0') && (s[i] != c))
 			i++;
-		if (i > j)
-		{
-			arr[k] = ft_strndup(&s[j], i - j);
-			k++;
-		}
+		if (i > start)
+			arr[row++] = ft_strndup(&s[start], i - start);
 	}
-	arr[k] = NULL;
+	arr[row] = NULL;
 	return (arr);
 }
