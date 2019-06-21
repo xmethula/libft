@@ -6,7 +6,7 @@
 #    By: xmethula <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/03 09:42:44 by xmethula          #+#    #+#              #
-#    Updated: 2019/06/18 11:21:58 by xmethula         ###   ########.fr        #
+#    Updated: 2019/06/21 13:39:47 by xmethula         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,6 +79,9 @@ $(NAME): $(OBJ)
 
 $(OBJ): $(FILES)
 	gcc $(CFLAGS) $(FILES)
+
+norm: 
+	norminette -R CheckForbiddenSourceHeader
 
 clean:
 	rm -f $(OBJ)	
