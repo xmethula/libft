@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 11:11:43 by xmethula          #+#    #+#             */
-/*   Updated: 2019/05/31 08:45:18 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/06/24 14:24:52 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,10 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
-		{
 			return ((char *)&s[i]);
-		}
 		i++;
 	}
 	if (c == '\0')
-	{
 		return ((char *)&s[i]);
-	}
 	return (NULL);
 }
