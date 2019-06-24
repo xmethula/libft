@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 07:58:22 by xmethula          #+#    #+#             */
-/*   Updated: 2019/06/13 08:57:09 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/06/24 15:56:52 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ void	ft_striter(char *s, void (*f)(char *))
 	size_t i;
 
 	i = 0;
-	if (s != NULL)
+	if ((s != NULL) && (f != NULL))
 	{
 		while (s[i] != '\0')
 		{
-			f(s + i);
+			f(&s[i]);
 			i++;
 		}
 	}
