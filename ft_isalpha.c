@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 10:17:14 by xmethula          #+#    #+#             */
-/*   Updated: 2019/05/23 10:20:45 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/06/25 13:00:33 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,7 @@
 int		ft_isalpha(int c)
 {
 	if ((ft_islower(c) == 1) || (ft_isupper(c) == 1))
-	{
 		return (1);
-	}
 	else
-	{
 		return (0);
-	}
 }
