@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 08:06:22 by xmethula          #+#    #+#             */
-/*   Updated: 2019/06/18 10:57:31 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/06/25 12:27:19 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char			*ft_strtrim(char const *s)
 		return (NULL);
 	ft_start(s, &i);
 	if (s[i] == '\0')
-		return ("");
+		return (ft_strdup(&s[i]));
 	ft_end(s, &j);
 	str = (char *)malloc(sizeof(char) * (j - i) + 2);
 	if (str == NULL)
