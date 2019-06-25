@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 15:02:48 by xmethula          #+#    #+#             */
-/*   Updated: 2019/06/05 16:12:28 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/06/25 12:37:49 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,7 @@ size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dlen = ft_strlen(dst);
 	dslen = ft_strlen(dst) + ft_strlen(src);
 	if (dstsize <= dlen)
-	{
 		return (ft_strlen(src) + dstsize);
-	}
 	space = dstsize - (dlen + 1);
 	while ((i < space) && (src[i] != '\0'))
 	{
