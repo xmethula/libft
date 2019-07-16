@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 07:42:23 by xmethula          #+#    #+#             */
-/*   Updated: 2019/07/09 12:42:25 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/07/16 08:38:01 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,7 @@ void		*ft_memmove(void *dst, const void *src, size_t len);
 void		*ft_memccpy(void *dst, void *src, int c, size_t n);
 void		*ft_memchr(const void *s, int c, size_t n);
 void		*ft_memalloc(size_t size);
+
+void		ft_putnbr_endl(int n);
 
 #endif
