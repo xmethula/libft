@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/23 07:51:49 by xmethula          #+#    #+#             */
-/*   Updated: 2019/07/26 18:19:19 by xmethula         ###   ########.fr       */
+/*   Created: 2019/07/31 12:08:29 by xmethula          #+#    #+#             */
+/*   Updated: 2019/07/31 15:38:16 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,47 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-void		add_end(t_list **node, int val)
+void	print(t_list *node)
+{
+	while (node != NULL)
+	{
+		ft_putnbr_endl(node->data);
+		node = node->next;
+	}
+}
+
+int		lst_len(t_list *node)
+{
+	int		len;
+
+	len = 0;
+	while (node != NULL)
+	{
+		len++;
+		node = node->next;
+	}
+	return (len);
+}
+
+void	add_start(t_list **node, int val)
+{
+	t_list		*new;
+
+	new = (t_list *)malloc(sizeof(t_list));
+	new->data = val;
+	if (*node == NULL)
+	{	
+		new->next = NULL;
+		*node = new;
+	}
+	else
+	{
+		new->next = *node;
+		*node = new;
+	}
+}
+
+void	add_end(t_list **node, int val)
 {
 	t_list		*new;
 	t_list		*i;
@@ -37,53 +77,121 @@ void		add_end(t_list **node, int val)
 	}
 }
 
-/* Given a reference (pointer to pointer) to the head
-of a list and an int, appends a new node at the end */
-void append(t_list **head_ref, int new_data)
+void	add_pos(t_list **node, int val, int pos)
 {
-	/* 1. allocate node */
-	t_list		*new_node = (t_list *) malloc(sizeof(t_list));
+	t_list		*new;
+	t_list		*i;
+	int			len;
+	int			j;
 
-	t_list		*last = *head_ref; /* used in step 5*/
-
-	/* 2. put in the data */
-	new_node->data = new_data;
-
-	/* 3. This new node is going to be the last node, so make next
-		of it as NULL*/
-	new_node->next = NULL;
-
-	/* 4. If the Linked List is empty, then make the new node as head */
-	if (*head_ref == NULL)
-		*head_ref = new_node;
+	new = (t_list *)malloc(sizeof(t_list));
+	new->data = val;
+	len = lst_len(*node);
+	if (pos > len)
+		ft_putendl("error");
+	else if (pos == 1)
+	{
+		new->next = (*node)->next;
+		(*node)->next = new;
+	}
 	else
 	{
-		/* 5. Else traverse till the last node */
-		while (last->next != NULL)
-			last = last->next;
-
-		/* 6. Change the next of last node */
-		last->next = new_node;
+		j = 1;
+		i = *node;
+		while (j < pos)
+		{
+			i = i->next;
+			j++;
+		}
+		new->next = i->next;
+		i->next = new;
 	}
+
 }
 
-void		print(t_list *node)
+void	del_start(t_list **node)
 {
-	while (node != NULL)
+	t_list		*tmp;
+
+	tmp = *node;
+	*node = tmp->next;
+	tmp->next = NULL;
+	free(tmp);
+}
+
+void	del_end(t_list **node)
+{
+	t_list		*tmp;
+	t_list		*i;
+	int			len;
+	int			j;
+
+	len = lst_len(*node);
+	j = 1;
+	i = *node;
+	while (j < (len - 1))
 	{
-		ft_putnbr_endl(node->data);
-		node = node->next;
+		i = i->next;
+		j++;
+	}
+	tmp = i->next;
+	i->next = NULL;
+	free(tmp);
+}
+
+void	del_pos(t_list **node, int val, int pos)
+{
+	t_list		*tmp;
+	t_list		*i;
+	int			len;
+	int			j;
+
+	len = lst_len(*node);
+	if (pos > len)
+		ft_putendl("error");
+	else if (pos == 1)
+		del_start(node);
+	else
+	{
+		j = 1;
+		i = *node;
+		while (j < (pos - 1))
+		{
+			i = i->next;
+			j++;
+		}
+		tmp = i->next;
+
 	}
 }
 
 int		main(void)
 {
 	t_list		*root;
-	
+
 	root = NULL;
-
-	add_end(&root, 5);
+	add_start(&root, 5);
 	print(root);
+	ft_putchar('\n');
 
+	add_end(&root, 10);
+	print(root);
+	ft_putchar('\n');
+
+	add_end(&root, 20);
+	print(root);
+	ft_putchar('\n');
+
+	add_pos(&root, 15, 2);
+	print(root);
+	ft_putchar('\n');
+
+	del_start(&root);
+	print(root);
+	ft_putchar('\n');
+
+	del_end(&root);
+	print(root);
+	ft_putchar('\n');
 	return (0);
 }
